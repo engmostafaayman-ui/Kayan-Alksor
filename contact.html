@@ -17,7 +17,7 @@
       font-family: 'Cairo', sans-serif;
       background: url('bg2.png') no-repeat center center fixed;
       background-size: cover;
-      color: white;
+      color: #0d1a2d;
       min-height: 100vh;
     }
 
@@ -55,62 +55,20 @@
       color: #ffcc00;
     }
 
-body {
-      font-family: 'Cairo', sans-serif;
-      background: url('bg2.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #0d1a2d;
-      min-height: 100vh;
-    }
-
-    /* شريط التنقل */
-    nav {
-      background-color: rgba(0, 60, 116, 0.95);
-      padding: 15px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    nav ul {
-      list-style: none;
+    .hero-section {
+      background: url('logo-full.png') no-repeat center center;
+      background-size: contain;
+      height: 300px;
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+      align-items: center;
+      position: relative;
     }
 
-    nav ul li {
-      margin: 0 15px;
+    .hero-section img {
+      max-width: 100%;
+      height: auto;
     }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #ffcc00;
-    }
-
-    /* القسم العلوي بالشعار */
-    .hero-section {
-  background: url('/logo-full.png') no-repeat center center;
-  background-size: contain;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.hero-section img {
-  max-width: 100%;
-  height: auto;
-}
 
     .contact-container {
       max-width: 900px;
@@ -122,22 +80,20 @@ body {
       box-shadow: 0 8px 24px rgba(0,0,0,0.4);
     }
 
-    .contact-container h1 {
+    .contact-container h1,
+    .contact-container h2 {
       text-align: center;
+      color: #fff;
+    }
+
+    .contact-container h1 {
       font-size: 32px;
-      margin-bottom: 15px;
-      color: #0d1a2d;
+      margin-bottom: 10px;
       font-weight: bold;
     }
 
     .contact-container h2 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 30px;
-      color: #0d1a2d;
-    }
-
-    .contact-info, .contact-form {
+      font-size: 22px;
       margin-bottom: 30px;
     }
 
@@ -207,11 +163,11 @@ body {
       }
 
       .contact-container h1 {
-        font-size: 40px;
+        font-size: 28px;
       }
 
       .contact-container h2 {
-        font-size: 20px;
+        font-size: 18px;
       }
     }
   </style>
@@ -230,23 +186,27 @@ body {
   </nav>
 
   <!-- الشعار -->
-   <section class="hero-section">
+  <section class="hero-section">
     <img src="header.jpg" alt="شعار كيان القصور">
   </section>
 
-  <!-- صندوق التواصل -->
+  <!-- محتوى التواصل -->
   <div class="contact-container">
     <h1>تواصل معنا</h1>
     <h2>نحن هنا من أجلك</h2>
 
     <div class="contact-info">
       <p><i class="fas fa-phone-alt"></i> الجوال: 0536888406</p>
-      <p><i class="fas fa-envelope"></i> البريد: KayanAlksor@gmail.com</p>
+      <p><i class="fas fa-envelope"></i> البريد: kayanalksor@gmail.com</p>
       <p><i class="fas fa-map-marker-alt"></i> الموقع: الرياض - حي الملز - حي الشفاء</p>
     </div>
 
     <div class="contact-form">
-      <form action="#" method="post">
+      <form action="https://formsubmit.co/kayanalksor@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://kayanalksor.com/thanks.html">
+        <input type="hidden" name="_subject" value="رسالة من صفحة التواصل بموقع كيان القصور">
+
         <label for="name">الاسم الكامل</label>
         <input type="text" id="name" name="name" required>
 
@@ -259,7 +219,7 @@ body {
         <label for="message">رسالتك</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button type="submit">إرسال</button>
+        <center><button type="submit">إرسال</button></center>
       </form>
     </div>
 
