@@ -1,0 +1,37 @@
+# تفعيل إعادة كتابة الروابط
+RewriteEngine On
+
+# إجبار الاتصال عبر HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# تحويل www إلى non-www (اختياري)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# تحديد الصفحة الرئيسية إذا كانت في مجلد
+DirectoryIndex index.html
+
+# حماية المجلدات من التصفح المباشر
+Options -Indexes
+
+# منع الوصول إلى ملفات النظام الحساسة
+<FilesMatch "^\.ht">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# تعيين نوع الترميز الافتراضي
+AddDefaultCharset UTF-8
+
+# إعداد التخزين المؤقت للملفات الثابتة
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
