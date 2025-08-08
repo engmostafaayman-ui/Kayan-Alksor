@@ -32,12 +32,17 @@
       z-index: 10;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+   nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; /* منع التفاف العناصر */
+  overflow-x: auto;   /* تمكين تمرير أفقي إن لزم */
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none; /* إخفاء التمرير في فايرفوكس */
+}
 
     nav ul li {
       margin: 0 15px;
@@ -280,5 +285,6 @@
 
 </body>
 </html>
+
 
 
