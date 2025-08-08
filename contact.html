@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصل معنا | كيان القصور</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: url('/static/images/bg2.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: #004e92;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+body {
+      font-family: 'Cairo', sans-serif;
+      background: url('/static/images/bg2.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #0d1a2d;
+      min-height: 100vh;
+    }
+
+    /* شريط التنقل */
+    nav {
+      background-color: rgba(0, 60, 116, 0.95);
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* القسم العلوي بالشعار */
+    .hero-section {
+  background: url('/static/images/logo-full.png') no-repeat center center;
+  background-size: contain;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+    .contact-container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .contact-container h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 15px;
+      color: #0d1a2d;
+      font-weight: bold;
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #0d1a2d;
+    }
+
+    .contact-info, .contact-form {
+      margin-bottom: 30px;
+    }
+
+    .contact-info p {
+      font-size: 18px;
+      margin: 10px 0;
+      color: #f1f1f1;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .contact-form button {
+      background-color: #004e92;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #00356a;
+    }
+
+    .map {
+      width: 100%;
+      height: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-top: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      .contact-container {
+        margin: 30px 20px;
+        padding: 30px 20px;
+      }
+
+      .contact-container h1 {
+        font-size: 40px;
+      }
+
+      .contact-container h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- شريط التنقل -->
+  <nav>
+    <ul>
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="about.html">من نحن</a></li>
+      <li><a href="services.html">خدماتنا</a></li>
+      <li><a href="offers.html">عروضنا</a></li>
+      <li><a href="contact.html">تواصل معنا</a></li>
+    </ul>
+  </nav>
+
+  <!-- الشعار -->
+   <section class="hero-section">
+    <img src="/static/images/header.jpg" alt="شعار كيان القصور">
+  </section>
+
+  <!-- صندوق التواصل -->
+  <div class="contact-container">
+    <h1>تواصل معنا</h1>
+    <h2>نحن هنا من أجلك</h2>
+
+    <div class="contact-info">
+      <p><i class="fas fa-phone-alt"></i> الجوال: 0536888406</p>
+      <p><i class="fas fa-envelope"></i> البريد: KayanAlksor@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> الموقع: الرياض - حي الملز - حي الشفاء</p>
+    </div>
+
+    <div class="contact-form">
+      <form action="#" method="post">
+        <label for="name">الاسم الكامل</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">رقم الجوال</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">رسالتك</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">إرسال</button>
+      </form>
+    </div>
+
+    <!-- خريطة -->
+    <div class="map">
+      <iframe src="https://www.google.com/maps?q=Riyadh&output=embed" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</body>
+</html>

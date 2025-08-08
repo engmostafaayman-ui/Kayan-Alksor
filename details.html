@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تفاصيل العقار | كيان القصور</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #004e92;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .details img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    .info {
+      flex: 1;
+    }
+
+    .info h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #004e92;
+    }
+
+    .info p {
+      font-size: 16px;
+      margin-bottom: 10px;
+      line-height: 1.7;
+    }
+
+    .info .price {
+      font-size: 22px;
+      font-weight: bold;
+      color: #e53935;
+      margin-top: 15px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      padding: 10px 25px;
+      border-radius: 8px;
+      margin-left: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .btn-call {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .btn-call:hover {
+      background-color: #218838;
+    }
+
+    .btn-back {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .btn-back:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .details {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>تفاصيل العقار</h1>
+  </header>
+
+  <div class="container">
+    <div class="details">
+      <img src="/static/images/ardmalaz.jpg" alt="صورة العقار">
+
+      <div class="info">
+        <h2>شقة للإيجار</h2>
+        <p><strong>الموقع:</strong> الرياض - حي الملز</p>
+        <p><strong>المساحة:</strong> 120 متر مربع</p>
+        <p><strong>الخصائص:</strong> غرفتين، صالة، حمام، مطبخ، مواقف سيارات</p>
+        <p><strong>الوصف:</strong> شقة مميزة للإيجار في موقع حيوي قريبة من الخدمات، مناسبة للعائلات، في بيئة آمنة ومريحة.</p>
+        <p class="price">السعر: 1,500 ريال شهريًا</p>
+
+        <div class="buttons">
+          <a href="tel:+966536888406" class="btn-call">📞 اتصال مباشر</a>
+          <a href="index.html" class="btn-back">⬅ العودة للرئيسية</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <map name="property-map">
+    <area shape="rect" coords="34,44,270,350" alt="صورة العقار" href="index.html">
+  </map>
+
+  <footer>
+    جميع الحقوق محفوظة © كيان القصور 2025
+  </footer>
+
+</body>
+</html>
+  
