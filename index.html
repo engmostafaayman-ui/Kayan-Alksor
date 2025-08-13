@@ -330,28 +330,46 @@
     document.body.appendChild(submenu);
 
     // تفعيل القائمة على أزرار المناطق
-    document.querySelectorAll('.region-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
+   // تفعيل القائمة على أزرار المناطق
+document.querySelectorAll('.region-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
 
-        const region = btn.dataset.region;
-        document.getElementById('sellLink').href = `buy.html?region=${encodeURIComponent(region)}`;
-        document.getElementById('rentLink').href = `rent.html?region=${encodeURIComponent(region)}`;
+    const region = btn.dataset.region;
 
-        // أظهر مؤقتًا لحساب العرض ثم حرّكها لتكون متمركزة أسفل الزر
-        submenu.style.visibility = 'hidden';
-        submenu.classList.add('show');
+    // اختيار الروابط حسب المنطقة
+    let buyPage = '';
+    let rentPage = '';
 
-        const rect = btn.getBoundingClientRect();
-        const calcLeft = window.scrollX + rect.left + (rect.width/2) - (submenu.offsetWidth/2);
-        const safeLeft = Math.max(8, calcLeft); // هامش من حافة الشاشة
-        const top = window.scrollY + rect.bottom + 8;
+    if (region === 'وسط الرياض') {
+      buyPage = 'w.buy.html';
+      rentPage = 'w.rent.html';
+    } else if (region === 'جنوب الرياض') {
+      buyPage = 'g.buy.html';
+      rentPage = 'g.rent.html';
+    } else {
+      // الافتراضي (إذا أردت دعم باقي المناطق لاحقاً)
+      buyPage = `buy.html?region=${encodeURIComponent(region)}`;
+      rentPage = `rent.html?region=${encodeURIComponent(region)}`;
+    }
 
-        submenu.style.left = safeLeft + 'px';
-        submenu.style.top  = top + 'px';
-        submenu.style.visibility = 'visible';
-      });
-    });
+    document.getElementById('sellLink').href = buyPage;
+    document.getElementById('rentLink').href = rentPage;
+
+    // أظهر مؤقتًا لحساب العرض ثم حرّكها لتكون متمركزة أسفل الزر
+    submenu.style.visibility = 'hidden';
+    submenu.classList.add('show');
+
+    const rect = btn.getBoundingClientRect();
+    const calcLeft = window.scrollX + rect.left + (rect.width / 2) - (submenu.offsetWidth / 2);
+    const safeLeft = Math.max(8, calcLeft); // هامش من حافة الشاشة
+    const top = window.scrollY + rect.bottom + 8;
+
+    submenu.style.left = safeLeft + 'px';
+    submenu.style.top = top + 'px';
+    submenu.style.visibility = 'visible';
+  });
+});
 
     // إغلاق عند الضغط خارجها أو عند التمرير/تغيير الحجم
     document.addEventListener('click', (e) => {
