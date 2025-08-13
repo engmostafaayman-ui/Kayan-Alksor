@@ -44,6 +44,7 @@
     @media (max-width:768px){.main-buttons{grid-template-columns:repeat(2,minmax(140px,1fr))}}
     @media (max-width:420px){.main-buttons{grid-template-columns:1fr}}
 
+    /* نمط الأزرار الموحد */
     .btn, .region-btn, .btn-google-review, .open-btn{
       display:flex;align-items:center;justify-content:center;
       height:56px;padding:0 18px;border-radius:12px;border:0;cursor:pointer;
@@ -51,12 +52,7 @@
       box-shadow:0 6px 16px rgba(0,0,0,.12);
       background:#0d1a2d;color:#fff;
     }
-    .btn:hover,.region-btn:hover,.open-btn:hover{transform:translateY(-2px);opacity:.95}
-    .btn-google-review{background:#4285F4;color:#fff}
-    .btn-google-review:hover{background:#3367D6}
-    .open-btn{background:#0077b5}
-
-    /* مجموعة أزرار المناطق داخل الشبكة */
+    .btn:hover,.region-btn:hover,.btn-google-review:hover,.open-btn:hover{transform:translateY(-2px);opacity:.95}
     .region-buttons{display:flex;gap:14px}
     .region-btn{flex:1}
 
@@ -73,7 +69,7 @@
     }
     .region-submenu a:hover{opacity:.9}
 
-    /* مودال السوشيال (اسماء فريدة لمنع التعارض) */
+    /* مودال السوشيال (أسماء فريدة لمنع التعارض) */
     .social-modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.5)}
     .social-modal__content{
       background:#fff;margin:15% auto;padding:20px;border-radius:10px;width:320px;text-align:center;position:relative
@@ -83,9 +79,37 @@
     .social-btn i{margin-left:8px}
     .social-btn:hover{background:#e6e6e6}
 
-    /* فيديو */
-    .video-section{background-color:rgba(255,255,255,.1);margin:20px auto;max-width:90%;padding:30px;border-radius:10px;text-align:center}
-    .video-section video{width:100%;border-radius:10px;background-color:#000}
+    /* فيديو (مقاس ثابت) */
+   /* حاوية الفيديو: تتمركز وتتمدد مع عرض الصفحة */
+.video-section{
+  background-color: rgba(255,255,255,.1);
+  margin: 20px auto;
+  width: min(1200px, 95vw);  /* يتمدّد حتى 1200px أو 95% من عرض الشاشة */
+  padding: 16px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* إطار بنسبة أبعاد ثابتة 16:9 */
+.video-aspect{
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;      /* يحافظ على النسبة أثناء التكبير/التصغير */
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* الفيديو يملأ الإطار استجابةً لحجمه */
+.video-aspect video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* يظهر كامل الإطار بدون قصّ */
+  display: block;
+}
+
 
     /* كروت العروض */
     .property-card{
@@ -190,13 +214,15 @@
     </div>
   </div>
 
-  <!-- فيديو -->
   <div class="video-section">
-    <video width="100%" controls>
+  <div class="video-aspect">
+    <video controls>
       <source src="video.mp4" type="video/mp4">
       متصفحك لا يدعم تشغيل الفيديو.
     </video>
   </div>
+</div>
+
 
   <!-- عنوان قسم العروض -->
   <section class="hero-section">
@@ -288,7 +314,6 @@
       const chips=document.getElementById('mFeatures');
       const call=document.getElementById('mCall');
       const wa=document.getElementById('mWa');
-      const closeBtn=document.querySelector('.btn-close');
 
       function openFromCard(card){
         const d=card.dataset;
