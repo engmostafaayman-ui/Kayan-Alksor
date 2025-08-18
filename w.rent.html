@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>عروض البيع - وسط الرياض | كيان القصور</title>
+  <title>عروض الإيجار - وسط الرياض | كيان القصور</title>
   <link rel="icon" href="logo.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,9 +24,6 @@
     nav ul li a{color:#fff;text-decoration:none;font-weight:bold;font-size:16px;transition:color .3s}
     nav ul li a:hover{color:#ffcc00}
 
-    .hero-section{background:url('logo-full.png') no-repeat center center;background-size:contain;display:flex;justify-content:center;align-items:center}
-    .hero-section img{max-width:100%;height:auto}
-
     .page-title{text-align:center;font-size:34px;font-weight:800;margin:16px 0}
     .page-subtitle{text-align:center;font-size:18px;opacity:.8;margin-bottom:10px}
     .cards{width:100%;max-width:920px;margin:10px auto 40px;padding:0 12px}
@@ -36,11 +33,13 @@
       padding:20px;max-width:800px;margin:16px auto;box-shadow:0 4px 12px rgba(0,0,0,.2);
       direction:rtl;min-height:180px;outline:none;
     }
+    h3{font-size:20px;font-weight:700;margin:12px 0;color:#090806; }
     .property-info{flex:1;padding-right:20px;display:flex;flex-direction:column;justify-content:space-between;color:#fff}
-    .property-info h3{margin-top:0;font-size:20px;color:#0d1a2d}
     .property-info p{margin:5px 0;font-size:16px;color:#eee}
+    .property-info .price{font-weight:700}
+    .price span{color:#ffcc00} /* الرقم فقط باللون الأصفر */
+    .location{color:#66c0ff}
 
-    /* صورة العقار */
     .property-image{
       width:220px;
       height:200px;
@@ -64,11 +63,6 @@
       }
     }
 
-    /* السعر: الكلمة بلون النص، والقيمة فقط بالأصفر */
-    .price{font-weight:700}
-    .price .price-value{color:#ffcc00}
-    .location{color:#66c0ff}
-
     .buttons{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
     .buttons a,.buttons button{ text-decoration:none;padding:10px 18px;border-radius:8px;font-size:15px;font-weight:700;display:inline-block;transition:all .2s ease;border:0;cursor:pointer}
     .btn-call{background:#28a745;color:#fff}.btn-call:hover{background:#218838}
@@ -81,6 +75,7 @@
     .modal__media img{width:100%;height:100%;object-fit:cover;display:block}
     .modal__body h2{margin:0 0 8px;color:#004e92;font-size:22px}
     .modal__body p{margin:6px 0;line-height:1.7;color:#333}
+    .modal__price span{color:#ffcc00;font-weight:700} /* الرقم في المودال باللون الأصفر */
     .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
     .chip{background:#f0f6ff;color:#0d47a1;border:1px solid #d9e8ff;padding:6px 10px;border-radius:999px;font-size:13px}
     .modal__actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
@@ -89,45 +84,29 @@
     .btn-close:hover{background:#f8fafc}
     @media(max-width:900px){.modal__dialog{grid-template-columns:1fr}}
     @keyframes zoomIn{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
-
-    /* في المودال أيضًا: اجعل قيمة السعر فقط بالأصفر */
-    .modal__price .price-value{color:#ffcc00;font-weight:700}
   </style>
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="about.html">من نحن</a></li>
-      <li><a href="services.html">خدماتنا</a></li>
-      <li><a href="https://www.notion.so/24c382cd612b803c8819f1d72effc932?v=24c382cd612b80828c7d000cbd7eaf92&source=copy_link">عروضنا</a></li>
-      <li><a href="contact.html">تواصل معنا</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero-section">
-    <img src="header.jpg" alt="شعار كيان القصور">
-  </section>
-
-  <h1 class="page-title">عروض البيع – وسط الرياض</h1>
-  <p class="page-subtitle">أفضل العروض المتاحة في وسط الرياض</p>
+  <h1 class="page-title">عروض الإيجار – وسط الرياض</h1>
+  <p class="page-subtitle">أفضل العروض المتاحة</p>
 
   <div class="cards">
     <!-- بطاقة 1 -->
     <div class="property-card"
-         data-title="فيلا للبيع (وسط الرياض)"
-         data-location="حي الربوة"
-         data-desc="طول الحد الشمالي 33 م - طول الحد الشرقي 24.25م - طول الحد الغربي 24.2 م - طول الحد الجنوبي 33 م"
-         data-price="علي السوم"
-         data-area="800.25 م²"
-         data-features="غرفتان, صالة, مطبخ, 2 حمام, مصعد"
+         data-title=" للإيجار دور ارضي (وسط الرياض)"
+         data-location=" حي الربوة"
+         data-desc="مجلس - 5 غرف - ملحق خرجي - مقلط - صالة - مطبخ"
+         data-price="100,000 ريال"
+         data-area="—"
+        data-features="مساحات كبيرة"
          data-phone="+966536888406"
-         data-image="ardmalaz.jpg">
+         data-image="doralrbya.png">
       <div class="property-info">
-        <h3>فيلا للبيع (وسط الرياض)</h3>
-        <p>طول الحد الشمالي 33 م - طول الحد الشرقي 24.25م - طول الحد الغربي 24.2 م - طول الحد الجنوبي 33 م</p>
-        <p class="price">السعر: <span class="price-value">علي السوم</span></p>
+                        <h3>للإيجار دور ارضي (وسط الرياض)</h3>
+
+        <p class="description">مجلس - 5 غرف - ملحق خرجي - مقلط - صالة - مطبخ</p>
+        <p class="price">السعر: <span>100,000 ريال</span></p>
         <p class="location">الموقع: حي الربوة</p>
         <div class="buttons">
           <a href="tel:+966536888406" class="btn-call">📞 اتصال</a>
@@ -135,84 +114,134 @@
         </div>
       </div>
       <div class="property-image">
-        <img src="villarabya.jpg" alt="شقة للبيع - وسط الرياض">
+        <img src="doralrbya.png" alt="دور للإيجار - حي الربوة">
       </div>
     </div>
 
-    <!-- بطاقة 2 -->
     <div class="property-card"
-         data-title="للبيع فيلا عمرها 35 سنه (وسط الرياض)"
-         data-location="وسط الرياض"
-         data-desc="فيلا فاخرة للبيع في وسط الرياض، تتكون من 10 غرف نوم و4 حمامات، مع حوش واسع يتسع لخمسة سيارات."
-         data-price="3,500,000 ريال"
-         data-area="600 م²"
-         data-features="مساحه 600 م² - 10 غرف نوم - 4 حمامات - حوش و باكيه تتسع ل خمس سيارات"
+         data-title=" للإيجار شقة رقم 4 (وسط الرياض)"
+         data-location=" حي جرير"
+         data-desc="شقه رقم 4 / غرفة - دورة مياة - مطبخ صغير - مستودع"
+         data-price="20,000 ريال"
+         data-area="—"
+        data-features="مكيفات راكبه - مطبخ راكب"
          data-phone="+966536888406"
-         data-image="villa35sana.png">
+         data-image="shaqa4.png">
       <div class="property-info">
-        <h3>للبيع فيلا عمرها 35 سنه</h3>
-        <p>مساحه 600 م² - 10 غرف نوم - 4 حمامات - حوش و باكيه تتسع ل خمس سيارات</p>
-        <p class="price">السعر: <span class="price-value">3,500,000 ريال</span></p>
-        <p class="location">الموقع: حي الملز</p>
+                <h3>للإيجار شقة رقم 4 (وسط الرياض)</h3>
+        <p class="description">شقه رقم 4 / غرفة - دورة مياة - مطبخ صغير - مستودع</p>
+        <p class="price">السعر: <span>20,000 ريال</span></p>
+        <p class="location">الموقع: حي جرير</p>
         <div class="buttons">
           <a href="tel:+966536888406" class="btn-call">📞 اتصال</a>
           <button class="btn-details">📋 تفاصيل</button>
         </div>
       </div>
       <div class="property-image">
-        <img src="villa35sana.png" alt="عمارة للبيع - وسط الرياض">
+        <img src="shaqa4.png" alt="شقة للإيجار - حي جرير">
       </div>
     </div>
-
-    <!-- بطاقة 3 -->
-    <div class="property-card"
-         data-title="فيلا للبيع (وسط الرياض)"
-         data-location="حي النهضة"
-         data-desc="شارع 15 م شارع تجاري درج داخلي و شقتين"
-         data-price="2,350,000 ريال"
-         data-area="360 م²"
-         data-features="غرفتان, صالة, مطبخ, 2 حمام, مصعد"
+      
+       <div class="property-card"
+         data-title=" للإيجار دور اول علوي (وسط الرياض)"
+         data-location=" حي الربوة"
+         data-desc="مجلس - 3 غرف - سطح - غرفه علي السطح - صالة - مطبخ"
+         data-price="100,000 ريال"
+         data-area="—"
+        data-features="مساحات كبيرة"
          data-phone="+966536888406"
-         data-image="villaalnahda.jpg">
+         data-image="doralrbya2.png">
       <div class="property-info">
-        <h3>فيلا للبيع (وسط الرياض)</h3>
-        <p>شارع 15 م شارع تجاري درج داخلي و شقتين</p>
-        <p class="price">السعر: <span class="price-value">2,350,000 ريال</span></p>
-        <p class="location">الموقع: حي النهضة</p>
+                        <h3>للإيجار دور اول علوي (وسط الرياض)</h3>
+
+        <p class="description">مجلس - 3 غرف - سطح - غرفه علي السطح - صالة - مطبخ</p>
+        <p class="price">السعر: <span>100,000 ريال</span></p>
+        <p class="location">الموقع: حي الربوة</p>
         <div class="buttons">
           <a href="tel:+966536888406" class="btn-call">📞 اتصال</a>
           <button class="btn-details">📋 تفاصيل</button>
         </div>
       </div>
       <div class="property-image">
-        <img src="villarabya.jpg" alt="شقة للبيع - وسط الرياض">
+        <img src="doralrbya2.png" alt="دور للإيجار - حي الربوة">
       </div>
     </div>
 
-    <!-- بطاقة 4 -->
-    <div class="property-card"
-         data-title="للبيع دوبلكس (وسط الرياض)"
-         data-location="حي النهضة"
-         data-desc="شارع 15 م - يتوفر شهادة عزل - تتوفر جميع الضمانات"
-         data-price="2,250,000 ريال"
-         data-area="300 م²"
-         data-features="غرفتان, صالة, مطبخ, 2 حمام, مصعد"
+     <div class="property-card"
+         data-title=" للإيجار عمارة (وسط الرياض)"
+         data-location=" حي جرير"
+         data-desc="تتكون من - 4 شقق - كل شقة 3 غرف - مطبخ - 2 دورات مياة  - "
+         data-price="250,000 ريال"
+         data-area="—"
+        data-features=" السطح يتكون من 3 غرف - مطبخ - 3 دورات مياة - مطبخ راكب"
          data-phone="+966536888406"
-         data-image="doblexalnahda.jpg">
+         data-image="omarajarir.png">
       <div class="property-info">
-        <h3>للبيع دوبلكس (وسط الرياض)</h3>
-        <p>شارع 15 م - يتوفر شهادة عزل - تتوفر جميع الضمانات</p>
-        <p class="price">السعر: <span class="price-value">2,250,000 ريال</span></p>
-        <p class="location">الموقع: حي النهضة</p>
+                <h3>للإيجار عمارة (وسط الرياض)</h3>
+        <p class="description">تتكون من - 4 شقق - كل شقة 3 غرف - مطبخ - 2 دورات مياة  - </p>
+        <p class="price">السعر: <span>250,000 ريال</span></p>
+        <p class="location">الموقع: حي جرير</p>
         <div class="buttons">
           <a href="tel:+966536888406" class="btn-call">📞 اتصال</a>
           <button class="btn-details">📋 تفاصيل</button>
         </div>
       </div>
       <div class="property-image">
-        <img src="doblexalnahda.jpg" alt="شقة للبيع - وسط الرياض">
+        <img src="omarajarir.png" alt="دور للإيجار - حي الربوة">
       </div>
     </div>
+    
+    <div class="property-card"
+         data-title=" للإيجار شقة رقم 6 (وسط الرياض)"
+         data-location=" حي جرير"
+         data-desc=" شقة 6 / 3 غرف - صالة - 2 دورات مياة - مطبخ "
+         data-price="39,000 ريال"
+         data-area="—"
+        data-features="مكيفات راكبه - مطبخ راكب"
+         data-phone="+966536888406"
+         data-image="shaqa6.png">
+      <div class="property-info">
+                <h3>للإيجار شقة رقم 6 (وسط الرياض)</h3>
+        <p class="description">شقة 6 / 3 غرف - صالة - 2 دورات مياة - مطبخ</p>
+        <p class="price">السعر: <span>39,000 ريال</span></p>
+        <p class="location">الموقع: حي جرير</p>
+        <div class="buttons">
+          <a href="tel:+966536888406" class="btn-call">📞 اتصال</a>
+          <button class="btn-details">📋 تفاصيل</button>
+        </div>
+      </div>
+      <div class="property-image">
+        <img src="shaqa6.png" alt="دور للإيجار - حي الربوة">
+      </div>
+    </div>
+
+       <div class="property-card"
+         data-title=" للإيجار شقة رقم 8 (وسط الرياض)"
+         data-location=" حي جرير"
+         data-desc=" شقة 8 / غرفة - حمام - مطبخ "
+         data-price="26,000 ريال"
+         data-area="—"
+        data-features="مكيفات راكبه - مطبخ راكب"
+         data-phone="+966536888406"
+         data-image="shaqa6.png">
+      <div class="property-info">
+                <h3>للإيجار شقة رقم 8 (وسط الرياض)</h3>
+        <p class="description">شقة 8 / غرفة - حمام - مطبخ</p>
+        <p class="price">السعر: <span>26,000 ريال</span></p>
+        <p class="location">الموقع: حي جرير</p>
+        <div class="buttons">
+          <a href="tel:+966536888406" class="btn-call">📞 اتصال</a>
+          <button class="btn-details">📋 تفاصيل</button>
+        </div>
+      </div>
+      <div class="property-image">
+        <img src="shaqa6.png" alt="دور للإيجار - حي الربوة">
+      </div>
+    </div>
+
+
+
+
   </div>
 
   <!-- المودال -->
@@ -226,7 +255,7 @@
         <p><strong>📐 المساحة:</strong> <span id="mArea">—</span></p>
         <p><strong>الوصف:</strong> <span id="mDesc">—</span></p>
         <div class="chips" id="mFeatures"></div>
-        <p class="modal__price"><strong>السعر:</strong> <span class="price-value" id="mPrice">—</span></p>
+        <p class="modal__price"><strong>السعر:</strong> <span id="mPrice">—</span></p>
         <div class="modal__actions">
           <a id="mCall" class="buttons btn-call" href="#" target="_blank">📞 اتصال</a>
           <a id="mWa" class="buttons btn-wa" href="#" target="_blank">💬 واتساب</a>
@@ -254,26 +283,25 @@
         loc.textContent=d.location||'—';
         area.textContent=d.area||'—';
         desc.textContent=d.desc||'—';
-        price.textContent=d.price||'—'; // القيمة فقط ستظهر باللون الأصفر عبر .price-value
-        const imgSrc=d.image||'';
-        img.src=imgSrc; img.alt=d.title||'صورة العقار';
-
+        price.textContent=d.price||'—';
+        img.src=d.image||''; img.alt=d.title||'صورة العقار';
         chips.innerHTML='';
         (d.features||'').split(',').map(s=>s.trim()).filter(Boolean).forEach(f=>{
-          const span=document.createElement('span'); span.className='chip'; span.textContent=f; chips.appendChild(span);
+          const span=document.createElement('span');
+          span.className='chip';
+          span.textContent=f;
+          chips.appendChild(span);
         });
-
         const phone=(d.phone||'').replace(/\s+/g,'');
         if(phone){
           call.href=`tel:${phone}`;
           wa.href=`https://wa.me/${phone.replace('+','')}`;
           call.style.display='inline-block';
           wa.style.display='inline-block';
-        }else{
+        } else {
           call.style.display='none';
           wa.style.display='none';
         }
-
         modal.style.display='block';
         modal.setAttribute('aria-hidden','false');
         document.body.style.overflow='hidden';
