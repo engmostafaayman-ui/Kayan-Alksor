@@ -36,25 +36,49 @@
       padding:20px;max-width:800px;margin:16px auto;box-shadow:0 4px 12px rgba(0,0,0,.2);
       direction:rtl;min-height:180px;outline:none;
     }
+    h3{font-size:20px;font-weight:700;margin:12px 0;color:#090806; }
     .property-info{flex:1;padding-right:20px;display:flex;flex-direction:column;justify-content:space-between;color:#fff}
-    .property-info h3{margin-top:0;font-size:20px;color:#0d1a2d}
     .property-info p{margin:5px 0;font-size:16px;color:#eee}
-    .property-image{width:160px;height:130px;background:#ddd;border-radius:12px;flex-shrink:0;margin-left:20px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-    .property-image img{width:100%;height:100%;object-fit:cover;border-radius:12px}
-    .price{color:#ffcc00;font-weight:700;font-size:18px}
+    .property-info .price{font-weight:700}
+    .price span{color:#ffcc00} /* الرقم فقط باللون الأصفر */
     .location{color:#66c0ff}
+
+    .property-image{
+      width:220px;
+      height:200px;
+      background:#ddd;
+      border-radius:12px;
+      flex-shrink:0;
+      margin-left:20px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center
+    }
+    .property-image img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+
+    @media (max-width:540px){
+      .property-card{flex-direction:column}
+      .property-image{
+        width:100%;
+        height:250px;
+        margin:0 0 12px 0
+      }
+    }
+
     .buttons{margin-top:10px;display:flex;gap:10px;flex-wrap:wrap}
     .buttons a,.buttons button{ text-decoration:none;padding:10px 18px;border-radius:8px;font-size:15px;font-weight:700;display:inline-block;transition:all .2s ease;border:0;cursor:pointer}
     .btn-call{background:#28a745;color:#fff}.btn-call:hover{background:#218838}
     .btn-details{background:#007bff;color:#fff}.btn-details:hover{background:#0056b3}
 
+    /* المودال */
     .modal{display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.7);padding:24px;overflow:auto}
     .modal__dialog{max-width:920px;margin:auto;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.2);display:grid;grid-template-columns:1.2fr 1fr;gap:20px;padding:18px;animation:zoomIn .2s ease}
     .modal__media{border-radius:12px;overflow:hidden;background:#f6f6f6;min-height:260px}
     .modal__media img{width:100%;height:100%;object-fit:cover;display:block}
     .modal__body h2{margin:0 0 8px;color:#004e92;font-size:22px}
     .modal__body p{margin:6px 0;line-height:1.7;color:#333}
-    .modal__price{color:#e53935;font-weight:700;margin-top:10px}
+    .modal__price span{color:#ffcc00;font-weight:700} /* الرقم في المودال باللون الأصفر */
     .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
     .chip{background:#f0f6ff;color:#0d47a1;border:1px solid #d9e8ff;padding:6px 10px;border-radius:999px;font-size:13px}
     .modal__actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
@@ -85,52 +109,55 @@
   <p class="page-subtitle">أفضل العروض المتاحة في جنوب الرياض ·
   <div class="cards">
     <!-- بطاقة 1 -->
+   
     <div class="property-card"
-         data-title="شقة للبيع (جنوب الرياض)"
-         data-location="جنوب الرياض"
-         data-desc="غرفتان · صالة · مطبخ · 2 حمام"
-         data-price="520,000 ريال"
-         data-area="135 م²"
-         data-features="غرفتان, صالة, مطبخ, 2 حمام, مصعد"
+         data-title="للبيع تاون هاوس أمامي    (جنوب الرياض)"
+         data-location="حي الشفا "
+         data-desc="تاون هاوس أمامي للبيع في جنوب الرياض، يتكون مجلس و ملقط و صالة و مطبخ و غرفة كبار سن / العلوى 3 غرف نوم."
+         data-price="780,000 ريال"
+         data-area="350 م²"
+         data-features="مخطط السعيدان - مساحه 350 م² - أمامي يتكون من مجلس و ملقط و صالة و مطبخ و غرفة كبار سن / العلوى 3 غرف نوم."
          data-phone="+966536888406"
-         data-image="ardmalaz.jpg">
+         data-image="townhouse_amamy.png">
       <div class="property-info">
-        <h3>شقة للبيع</h3>
-        <p>غرفتان - صالة - مطبخ - 2 حمام</p>
-        <p class="price">السعر: 520,000 ريال</p>
-        <p class="location">الموقع: جنوب الرياض</p>
+        <h3>للبيع تاون هاوس أمامي    (جنوب الرياض)</h3>
+        <p>مساحه 350 م² - 5 غرف  - مطبخ - غرفة كبار سن مع دور علوي</p>
+        <p class="price">السعر: <span>780,000 ريال</span></p>
+        <p class="location">الموقع: حي الشفا</p>
         <div class="buttons">
           <a href="tel:+966536888406" class="btn-call">📞 اتصال</a>
           <button class="btn-details">📋 تفاصيل</button>
         </div>
       </div>
       <div class="property-image">
-        <img src="ardmalaz.jpg" alt="شقة للبيع - جنوب الرياض">
+        <img src="townhouse_amamy.png" alt="عمارة للبيع - وسط الرياض">
       </div>
     </div>
+  </div>
+
 
     <!-- بطاقة 2 -->
-    <div class="property-card"
-         data-title="عمارة سكنية للبيع (جنوب الرياض)"
-         data-location="جنوب الرياض"
-         data-desc="6 شقق · مواقف · مصعد"
-         data-price="3,200,000 ريال"
-         data-area="600 م²"
-         data-features="6 شقق, مواقف, مصعد, شارع 20م"
+       <div class="property-card"
+         data-title="للبيع تاون هاوس خلفي    (جنوب الرياض)"
+         data-location="حي الشفا "
+         data-desc="تاون هاوس خلفي للبيع في جنوب الرياض، يتكون من مجلس و مقلط و صالة و مطبخ و غرفة كبار سن / 4 غرف نوم وصاله مع السطح ."
+         data-price="780,000 ريال"
+         data-area="350 م²"
+         data-features="مساحات كبيرة."
          data-phone="+966536888406"
-         data-image="astraha solly.jpg">
+         data-image="townhouse_8alfy.png">
       <div class="property-info">
-        <h3>عمارة سكنية للبيع</h3>
-        <p>6 شقق - مواقف - مصعد</p>
-        <p class="price">السعر: 3,200,000 ريال</p>
-        <p class="location">الموقع: وسط الرياض</p>
+        <h3>للبيع تاون هاوس خلفي    (جنوب الرياض)</h3>
+        <p>مساحه 350 م²  - مطبخ - غرفة كبار سن - 6 غرف وصاله مع السطح</p>
+        <p class="price">السعر: <span>680,000 ريال</span></p>
+        <p class="location">الموقع: حي الشفا</p>
         <div class="buttons">
           <a href="tel:+966536888406" class="btn-call">📞 اتصال</a>
           <button class="btn-details">📋 تفاصيل</button>
         </div>
       </div>
       <div class="property-image">
-        <img src="astraha solly.jpg" alt="عمارة للبيع - وسط الرياض">
+        <img src="townhouse_8alfy.png" alt="عمارة للبيع - وسط الرياض">
       </div>
     </div>
   </div>
