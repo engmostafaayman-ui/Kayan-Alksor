@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>عروض الإيجار - جنوب الرياض | كيان القصور</title>
-  <link rel="icon" href="logo.png" type="image/png">
+  <link rel="icon" href="images/logo.png" type="image/png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -12,7 +12,7 @@
     html{scroll-behavior:smooth}
     body{
       font-family:'Cairo',sans-serif;
-      background:url('bg2.png') no-repeat center center fixed;
+      background:url('images/bg2.png') no-repeat center center fixed;
       background-size:cover;
       color:#0d1a2d;
       min-height:100vh;
@@ -59,12 +59,33 @@
     }
     .property-info h3{margin-top:0;font-size:20px;color:#0d1a2d}
     .property-info p{margin:5px 0;font-size:16px;color:#eee}
-    .property-image{
-      width:160px;height:130px;background:#ddd;border-radius:12px;flex-shrink:0;margin-left:20px;
-      overflow:hidden;display:flex;align-items:center;justify-content:center;
+        .property-image{
+      width:220px;
+      height: 200px;
+      background:#ddd;
+      border-radius:12px;
+      flex-shrink:0;
+      margin-left:20px;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      justify-content:center
     }
     .property-image img{width:100%;height:100%;object-fit:cover;border-radius:12px}
 
+    @media (max-width:540px){
+      .property-card{
+        flex-direction: column;
+      }
+    }
+    @media (max-width:540px){
+      .property-card{flex-direction:column}
+      .property-image{
+        width:100%;
+        height: 250px;
+        margin:0 0 12px 0
+      }
+    }
     .price{color:#ffcc00;font-weight:700;font-size:18px}
     .location{color:#66c0ff}
 
@@ -114,7 +135,7 @@
 
   <!-- الهيدر -->
   <section class="hero-section">
-    <img src="header.jpg" alt="شعار كيان القصور">
+    <img src="images/header.jpg" alt="شعار كيان القصور">
   </section>
 
   <h1 class="page-title">عروض الإيجار – جنوب الرياض</h1>
@@ -131,7 +152,7 @@
          data-area="—"
          data-features="غرفتان, صالة, حمام, مطبخ"
          data-phone="+966536888406"
-         data-image="ardmalaz.jpg">
+         data-image="images/ardmalaz.jpg">
       <div class="property-info">
         <h3>شقة للإيجار</h3>
         <p>غرفتان - صالة - حمام - مطبخ</p>
@@ -143,7 +164,7 @@
         </div>
       </div>
       <div class="property-image">
-        <img src="ardmalaz.jpg" alt="شقة للإيجار - جنوب الرياض">
+        <img src="images/ardmalaz.jpg" alt="شقة للإيجار - جنوب الرياض">
       </div>
     </div>
 
@@ -156,7 +177,7 @@
          data-area="—"
          data-features="4 غرف, صالة, مسبح, مطبخ"
          data-phone="+966536888406"
-         data-image="astraha solly.jpg">
+         data-image="images/astraha solly.jpg">
       <div class="property-info">
         <h3>استراحة للإيجار</h3>
         <p>4 غرف - صالة - مسبح - مطبخ</p>
@@ -168,7 +189,7 @@
         </div>
       </div>
       <div class="property-image">
-        <img src="astraha solly.jpg" alt="استراحة للإيجار - جنوب الرياض">
+        <img src="images/astraha solly.jpg" alt="استراحة للإيجار - جنوب الرياض">
       </div>
     </div>
 
